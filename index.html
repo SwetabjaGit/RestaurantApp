@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Javascript Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggler" data-toggle="open-navbar1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#">
+          <h4 class="logo"><span>LOGO</span></h4>
+        </a>
+        <input class="search-box" type="text" placeholder="Search for Restaurants"></input>
+      </div>
+  
+      <div class="navbar-menu" id="open-navbar1">
+        <ul class="navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+              Categories <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown" id="my-dropdown-id">
+              <li><a href="#">Actions</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Seprated link</a></li>
+              <li class="separator"></li>
+              <li><a href="#">One more seprated link.</a></li>
+            </ul>
+          </li>
+          <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="blog">
+              Blog <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown" id="blog">
+              <li><a href="#">Some category</a></li>
+              <li><a href="#">Some another category</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Seprated link</a></li>
+              <li class="separator"></li>
+              <li><a href="#">One more seprated link.</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Signin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="offers-banner">
+    <div class="offers-items">
+      <div class="line1">Offers for you</div>
+      <div class="line2">Explore top deals and offers exclusively for you!</div>
+    </div>
+    <div class="offers-image">
+      <img alt="offersimage" height="200" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/KHu24Gqw_md3ham"/>
+    </div>
+  </div>
+
+  <div class="restaurants-wrapper">
+    <div class="header">
+      <div class="num-restaurants">Showing 15 Restaurants</div>
+
+      <div class="ops-container">
+        <div class="sort-dropdown">
+          <button class="dropdown-toggler" data-dropdown="sort-dropdown">Sort</button>
+          <ul class="dropdown" id="sort-dropdown">
+            <li><a id="relevance" href="#">Relevance</a><div class="separator"></div></li>
+            <li><a id="average-cost" href="#">Average Cost</a><div class="separator"></div></li>
+            <li><a id="delivery-time" href="#">Delivery Time</a><div class="separator"></div></li>
+            <li><a id="rating" href="#">Rating</a><div class="separator"></div></li>
+          </ul>
+        </div>
+        <div class="filter-dropdown">
+          <button class="dropdown-toggler" data-dropdown="filter-dropdown">Filter</button>
+          <ul class="dropdown" id="filter-dropdown">
+            <li><a id="american" href="#">American</a><div class="separator"></div></li>
+            <li><a id="mexican" href="#">Mexican</a><div class="separator"></div></li>
+            <li><a id="asian" href="#">Asian</a><div class="separator"></div></li>
+            <li><a id="pizza" href="#">Pizza</a><div class="separator"></div></li>
+            <li><a id="chinese" href="#">Chinese</a><div class="separator"></div></li>
+            <li><a id="southindian" href="#">SouthIndian</a><div class="separator"></div></li>
+            <li><a id="cusines" href="#">Cusines</a><div class="separator"></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="restaurants-grid">
+      <!-- Fetch data from API & Display here -->
+    </div>
+  </div>
+  <div class="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
